@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+body{
+  
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.wrapper h2{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Mitr', sans-serif;
+}
+
+.tabcontainer{
+    display: flex;
+    margin: 0 auto;
+    width: 47%;
+    gap: 3.9rem;
+    justify-content: space-between;
+    margin-block:3rem ;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.tab{
+    padding-block: 8px;
+    padding-inline: 6px;
+    font-family: 'Mitr', sans-serif;
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.sub-container{
+
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.grant-location-container{
+    display: none;
+   
+    flex-direction: column;
+}
+.grant-location-container.active{
+    display:flex;
+}
+
+.grant-location-container img{
+  height: 10rem;
+  width: 10rem;
+  margin-block: 1rem;
+}
+
+
+.grant-location-container p:first-of-type{
+    color: white;
+    font-size: 1.7rem;
+    font-style: bold;
+
+    font-family: 'Mitr', sans-serif;
+}
+
+.grant-location-container p:last-of-type{
+    color: white;
+    margin-block: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.grant-location-container button.btn{
+    appearance: none;
+    border: none;
+    background-color: #3F72AF;
+    color: white;
+    padding-block: 0.7rem;
+    padding-inline: 1.5rem;
+    margin-block:1rem;
+    border-radius: 4px;
+
+}
+
+
+.loading{
+    display: none;
+}
+
+.loading.active{
+    display: flex;
+}
+
+.loading img{
+    height: 14rem;
+    width: 14rem;
+
+}
+.loading p{
+    color:white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Mitr', sans-serif;
+
+}
+
+.user-info-container
+{
+    display: none;
+  
+}
+
+.user-info-container.active{
+    display: flex;
+}
+
+.user-info-container div.name{
+    display: flex;
+    gap: 1rem;
+    margin-block: 1.2rem;
+}
+
+.user-info-container div.name p{
+    color: white;
+    font-size: 2.7rem;
+}
+
+.user-info-container div.name img{
+    height: 3vh;
+    width: 4vw;
+    margin-top: 1rem;
+
+}
+
+.user-info-container p[data-weatherdesc]{
+    color: white;
+    font-size: 1.7rem;
+}
+.user-info-container img[data-weathericon]{
+    height: 15vh;
+    width: 10vw;
+}
+
+.user-info-container p[data-temp]{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.parameter-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    
+}
+
+.parameter{
+    height: 25vh;
+    width: 15vw;
+     background-color: rgba(219, 226, 239, 0.5);
+     border-radius: 14px;
+     padding-block:1rem ;
+     padding-inline:2rem ;
+     margin-block:1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.parameter img{
+    height: 10vh;
+    width: 12vh;
+}
+
+.parameter p:first-of-type{
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.parameter p:last-of-type{
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.searchbar{
+    display: none;
+    flex-direction:row;
+    gap: 15px;
+    margin-top: 5vh;
+}
+
+.searchbar.active{
+    display: flex;
+}
+
+.searchbar input[data-search-city]{
+    all: unset;
+    height: 1rem;
+    width: 39vw;
+    background-color:rgba(219, 226, 239, 0.5);
+    padding-block: 1rem;
+    padding-inline:2rem;
+    border-radius: 15px;
+
+}
+.searchbar input::placeholder{
+    color:white;
+    font-size: 1.2rem;
+    font-family: 'Mitr', sans-serif;
+    opacity: 0.7;
+}
+
+.searchbar button.searchbtn{
+    background-color: #3F72AF;
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar img{
+    all:unset;
+    height: 1.6rem;
+    width: 1.6rem;
+ 
+    border-radius: 50%;
+
+
+}
+
+.searchbar input[data-search-city]:focus{
+    border:2px solid white;
+}
+
+.searchbar input[type="text"]{
+    color:white;
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+    font-weight: 400;
+}
+
+@media (max-width: 960px){
+
+    html{
+        font-size: 12px;
+    }
+    
+    .parameter-container{
+        display: flex;
+        flex-direction:column;
+       
+    }
+    .parameter{
+        width: 49vw;
+        height: 12vh;
+        margin-block:0px;
+    }
+
+    .user-info-container div.name{
+        margin-block: 0px;
+    }
+  
+    .searchbar{
+        margin-top: 0px;
+    }
+
+    .parameter img{
+        height: 5vh;
+        width: 6vh;
+    }
+ 
+}
